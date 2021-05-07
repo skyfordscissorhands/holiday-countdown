@@ -63,40 +63,7 @@
 // dogAge(2);
 // dogAge(4);
 
-// this gets the time
-var currentTime= new Date();
-
-var time= document.getElementById("cTime");
-time.innerHTML= currentTime.toLocaleTimeString();
-
-// this is the date
-
-var date= document.getElementById("cDate");
-date.innerHTML= currentTime.toLocaleDateString();
-
-// day of week
-var weekDays= new Array("Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat");
-var dayofWeek= document.getElementById("dayofWeek");
-dayofWeek.innerHTML= weekDays[currentTime.getDay()];
-// execute functin to run display clock
-
-
-
-
-runClock();
-setInterval("runClock()",1000);
-
-// function to create and run the countdown
-function runClock() {
-    // current time and date
-    var currentDay= new Date();
-    var dateStr= currentDay.toLocaleDateString();
-    var timeStr= currentDay.toLocaleTimeString();
-
-    // dispaly current date and time
-    document.getElementById("cTime").innerHTML=
-    dateStr + "   " + timeStr;
-// set timer date 
+// / set timer date 
 // var today= new Date();  
 // var eventDate= new Date("July 15,2021 00:00::");
 // GET CURRENT TIME
@@ -110,6 +77,85 @@ function runClock() {
 // seonds= /60
 
 // ? (if) ;(else)
+
+// this gets the time
+// var currentTime= new Date();
+
+// var time= document.getElementById("cTime");
+// time.innerHTML= currentTime.toLocaleTimeString();
+
+// // this is the date
+
+// var date= document.getElementById("cDate");
+// date.innerHTML= currentTime.toLocaleDateString();
+
+// // day of week
+// var weekDays= new Array("Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat");
+// var dayofWeek= document.getElementById("dayofWeek");
+// dayofWeek.innerHTML= weekDays[currentTime.getDay()];
+
+
+// runClock();
+// setInterval("runClock()",1000);
+
+// // function to create and run the countdown
+// function runClock() {
+//     // current time and date
+//     var currentDay= new Date();
+//     var dateStr= currentDay.toLocaleDateString();
+//     var timeStr= currentDay.toLocaleTimeString();
+
+//     // dispaly current date and time
+//     document.getElementById("cTime").innerHTML=
+//     dateStr + "   " + timeStr;
+
+
+// /
+//     // calculate days until July 15
+//     var newDay = new Date("July 15, 2021 00:00:00");
+//     var nextDay = currentDay.getFullYear("cTime");
+//     newDay.setFullYear(nextDay);
+//     var daysLeft = (newDay- currentDay)/(1000*60*60*24);
+    
+//     // calculate hoursleft
+//     var hoursleft = (daysLeft - Math.floor(daysLeft))*24;
+
+//     // calcuate minutes and secs
+//     var minLeft = (hoursleft - Math.floor(hoursleft))*60;
+//     var secsLeft = (minLeft - Math.floor(minLeft))*60;
+
+//     // dispay time left until new years
+//     document.getElementById("days").textContent = Math.floor(daysLeft);
+//     document.getElementById("hours").textContent = Math.floor(hoursleft);
+//     document.getElementById("minutes").textContent = Math.floor(minLeft);
+//     document.getElementById("seconds").textContent = Math.floor(secsLeft);
+
+//     setTimeout(countDown,1000);
+// }
+// countDown();
+
+var currentTime= new Date();
+var time= document.getElementById("cTime");
+time.innerHTML= currentTime.toLocaleTimeString();
+// this is the date
+var date= document.getElementById("cDate");
+date.innerHTML= currentTime.toLocaleDateString();
+// day of week
+var weekDays= new Array("Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat");
+var dayofWeek= document.getElementById("dayofWeek");
+dayofWeek.innerHTML= weekDays[currentTime.getDay()];
+runClock();
+setInterval("runClock()",1000);
+// function to create and run the countdown
+function runClock() {
+    // current time and date
+    var currentDay= new Date();
+    var dateStr= currentDay.toLocaleDateString();
+    var timeStr= currentDay.toLocaleTimeString();
+    // dispaly current date and time
+    document.getElementById("cTime").innerHTML=
+    dateStr + "   " + timeStr;
+// ? (if) ;(else)
 // 
     // calculate days until July 15
     var newDay = new Date("July 15, 2021 00:00:00");
@@ -119,17 +165,14 @@ function runClock() {
     
     // calculate hoursleft
     var hoursleft = (daysLeft - Math.floor(daysLeft))*24;
-
     // calcuate minutes and secs
     var minLeft = (hoursleft - Math.floor(hoursleft))*60;
     var secsLeft = (minLeft - Math.floor(minLeft))*60;
-
     // dispay time left until new years
     document.getElementById("days").textContent = Math.floor(daysLeft);
     document.getElementById("hours").textContent = Math.floor(hoursleft);
     document.getElementById("minutes").textContent = Math.floor(minLeft);
     document.getElementById("seconds").textContent = Math.floor(secsLeft);
-
     setTimeout(countDown,1000);
 }
 countDown();
